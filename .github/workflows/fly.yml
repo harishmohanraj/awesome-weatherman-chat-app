@@ -93,7 +93,7 @@ jobs:
           FASTAGENCY_SERVER_URL: ${{ vars.FASTAGENCY_SERVER_URL }}
 
       - name: Add the website url to the repository description
-        run: gh repo edit --homepage "https://fastagency.ai"
+        run: gh repo edit --homepage "https://captn.ai/"
         env:
           GH_TOKEN: ${{ secrets.USER_GH_PAT }}
       
