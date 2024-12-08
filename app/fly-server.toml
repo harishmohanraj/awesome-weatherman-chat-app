@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for fa-awesome-weatherman-1719904659-server on 2024-07-02T07:18:15Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'fa-awesome-weatherman-1719904659-server'
+primary_region = 'mia'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
